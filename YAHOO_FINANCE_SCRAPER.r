@@ -4,7 +4,7 @@ library("dplyr")
 library("rvest")
 library("stringr")
 
-setwd("D:/Thomas_Blanck/Thomas_Blanck/RStudio-Projects/stock market data/Webcrawler/Yahoo Finance")
+setwd("C:/path/to/your/directory")
 
 #make the webpages
 paste_ticker<-function(ticker){
@@ -250,7 +250,7 @@ for(i in 1:7){
 # stock_data_1 <- read.csv2(path[str_detect(path,keyword)])
  
 # #lets get the function to clean the text by pattern
-# source("D:\\Thomas Blanck\\Thomas Blanck\\RStudio-Projects\\stock market data\\Webcrawler\\Functions\\text_start_stop_finder.r")
+# source("C:/path/to/your/text_start_stop_finder.r")
 # 
 # 
 # #some preprocessing
