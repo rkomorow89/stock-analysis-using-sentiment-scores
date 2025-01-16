@@ -4,7 +4,7 @@ library("dplyr")
 library("rvest")
 library("stringr")
 
-setwd("C:/Users/Robert/OneDrive/Dokumente/R Shiny/Scraping Data")
+setwd("C:/path/to/your/directory")
 
 stock<-c("AMZN","DAI.DE","NFLX","TSLA","GOOG","MSFT","WMT")
 
