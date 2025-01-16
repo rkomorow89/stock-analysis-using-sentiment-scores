@@ -19,16 +19,16 @@ library(corpus)
 library(textstem)
 
 # ##Read the data#
-# #Working Directory ändern#
-# setwd("C:\\Users\\Robert\\OneDrive\\Dokumente\\R Shiny\\R Programme")
+# #Working Directory Ã¤ndern#
+# setwd("C:/path/to/your/directory")
 # #rufe Funktion auf, mit der Texte nach bestimmten Mustern aufgeteilt werden k?nnen#
-# source("C:\\Users\\Robert\\OneDrive\\Dokumente\\R Shiny\\R Programme\\text_start_stop_finder.r")
+# source("C:/path/to/your/text_start_stop_finder.r")
 
 
 
 prepare_plot<-function(X){
   #####################################READ IN THE DATA FROM  DATABASE##################################
-  con <- dbConnect(RMySQL::MySQL(), host = "s215.goserver.host",dbname="web187_db4",user = "web187_4", password = "STOCKMARKET2020")
+  con <- dbConnect(RMySQL::MySQL(), host = "your-database-host",dbname="your-database-name",user = "your-username", password = "your-password")
   # close db connection after function call exits!!!!!!!!
   on.exit(dbDisconnect(con))
   
@@ -54,7 +54,7 @@ prepare_plot<-function(X){
     
     #Teile Abschnitte in einzelne Saetze anhand von Satzpunkten auf#
     split_text<-text_split(text_to_analyze_Z)
-    #Bestimme Grundformen der Wörter in einem Satz
+    #Bestimme Grundformen der WÃ¶rter in einem Satz
     lemmatize_strings_text<-lemmatize_strings(as.character(split_text$text))
    
     
@@ -300,8 +300,8 @@ prepare_plot<-function(X){
 
 ############################################################################################################################
 
-# #source("C:\\Users\\Robert\\OneDrive\\Dokumente\\R Shiny\\R Programme\\Komplett-Analyse_Plotliste.R")
-# source("C:\\Users\\Robert\\OneDrive\\Dokumente\\R Shiny\\R Programme\\1_Komplett-Analyse_Plotliste_scale_twosides.R")
+# source("path/to/your/Komplett-Analyse_Plotliste.R")
+# source("path/to/your/1_Komplett-Analyse_Plotliste_scale_twosides.R")
 # 
 
 
@@ -628,7 +628,7 @@ barplot(positiv,
         axes=TRUE
         )
 
-#Raster hinzuf�gen
+#Raster hinzufügen
 grid(nx=NULL, ny=NULL)
 
 #Anzahl negativer Nachrichten
@@ -666,7 +666,7 @@ barplot(negativ,
         ann=FALSE,
         axes=TRUE
         )
-#Raster hinzuf�gen
+#Raster hinzufügen
 grid(nx=NULL, ny=NULL)
 
 #Anzahl negativer Nachrichten
@@ -708,7 +708,7 @@ barplot(neutral,
         ann=FALSE,
         axes=TRUE
         )
-#Raster hinzuf�gen
+#Raster hinzufügen
 grid(nx=NULL, ny=NULL)
 
 #Anzahl neutraler Nachrichten
